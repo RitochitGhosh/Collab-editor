@@ -53,9 +53,6 @@ export const RemoveDialog = ({ documentId, children }: RemoveDialogProps) => {
               setIsRemoving(true);
               remove({ id: documentId })
                 .catch(() => toast.error("Unauthorized attempt to delete a document!"))
-                .then(() => {
-                  toast.success("Document removed")
-                })
                 .finally(() => setIsRemoving(false));
             }}
           >

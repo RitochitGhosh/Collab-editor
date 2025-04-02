@@ -45,8 +45,7 @@ export const RenameDialog = ({
       .catch(() => toast.error("Unauthorized attempt to update a document!"))
       .then(() => setOpen(false))
       .finally(() => {
-        setIsUpdating(false);
-        toast.success("Document updated")        
+        setIsUpdating(false);     
       });
   };
 
